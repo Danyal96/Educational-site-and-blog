@@ -7,17 +7,25 @@ import { FaCode } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
 import { ImBooks } from "react-icons/im";
 import { BsFillSkipStartFill } from "react-icons/bs";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 function Hero() {
+
+  useEffect(()=>{
+    Aos.init()
+  } , [])
+
   return (
     <>
       <div className="heroContainer">
         <Container>
           <Row className="align-items-center">
-            <Col className="col-12 col-md-6">
+            <Col className="col-12 col-md-6" data-aos="zoom-in-down">
               <img src={heroImage} className="img-fluid heroImage" />
             </Col>
-            <Col className="cols-12 cols-md-6">
+            <Col className="cols-12 cols-md-6" data-aos="zoom-in-down">
               <h2 className="heroTitle">آمار ما باعث افتخار ما هستند</h2>
               <Row className="justify-content-center row-cols-1 row-cols-xl-2 gy-4 ">
                 <Col>
