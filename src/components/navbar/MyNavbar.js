@@ -28,6 +28,7 @@ function MyNavbar() {
               <NavLink className='nav-link' to='/' >صفحه اصلی</NavLink>
               <NavLink className='nav-link' to='/add-article' >ساخت مقاله</NavLink>
               <NavLink className='nav-link' to='/articles' >مقالات</NavLink>
+              <NavLink className='nav-link' to='/courses' >دوره ها</NavLink>
               <NavLink className='nav-link' to='/about' >درباره ما</NavLink>
             </Nav>
           </Offcanvas.Body>
