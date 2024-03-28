@@ -17,15 +17,15 @@ function Footer() {
       <footer className="footer">
         <Container>
           <Row>
-            <Col>
+            <Col className="col-12 col-md-6 col-lg-4">
               <BiLogoGmail />
               <span>danyalamirhosseini@gmail.com</span>
             </Col>
-            <Col>
+            <Col className="col-12 col-md-6 col-lg-4">
               <FaTelegramPlane />
              <span> @danyal_amirhosseini</span>
             </Col>
-            <Col>
+            <Col className="col-12 col-md-6 col-lg-4">
               <FaLinkedin />
               <span>Danyal Amirhosseini</span>
             </Col>

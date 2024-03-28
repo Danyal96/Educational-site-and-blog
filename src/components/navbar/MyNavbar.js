@@ -20,7 +20,7 @@ function MyNavbar() {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-              بلاگ نکست وان کد
+              بلاگ تستی
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>

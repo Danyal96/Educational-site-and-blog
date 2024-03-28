@@ -108,16 +108,15 @@ function Home() {
         </Row>
 
         <Row className="py-4 coment-Section">
-
           <div className="swiperTopSection">
             <h2 className="sectionTitle">نظرات دانشجویان</h2>
           </div>
 
           <Col className="col-12 col-md-6">
-            <img src={comentImage} className="comentImage" />
+            <img src={comentImage} className="comentImage img-fluid" />
           </Col>
 
-          <Col className="col-12 col-md-6">
+          <Col className="col-12 col-md-6 swiper-container">
             <Swiper
               effect={"cards"}
               grabCursor={true}
@@ -127,6 +126,7 @@ function Home() {
               <div className="swiperBtns">
                 <SwiperButtons />
               </div>
+
               <SwiperSlide>
                 <Coments title="امیرحسین دانایی" />
               </SwiperSlide>
@@ -158,6 +158,7 @@ function Home() {
           </Col>
         </Row>
       </Container>
+
       <Footer />
     </>
   );
