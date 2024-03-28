@@ -13,3 +13,16 @@
     justify-content: space-between;
     align-items: center;
 }
+.swiperBtns{
+    margin-top: 20px;
+
+}
+.comentImage{
+    width: 500px;
+}
+.coment-Section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

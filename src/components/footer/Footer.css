@@ -1,3 +1,7 @@
-footer{
-    background-color: rgb(204, 204, 204);
+.footer{
+    background-color: #a9c2c4;
+    padding: 20px;
+}
+.footer span{
+    padding: 0 10px;
 }

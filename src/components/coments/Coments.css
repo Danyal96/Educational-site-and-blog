@@ -1,0 +1,9 @@
+.comentContainer{
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.comentContainer p{
+    text-align: justify;
+}
