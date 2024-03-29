@@ -112,8 +112,8 @@ function Home() {
             <h2 className="sectionTitle">نظرات دانشجویان</h2>
           </div>
 
-          <Col className="col-12 col-md-6">
-            <img src={comentImage} className="comentImage img-fluid" />
+          <Col className="col-12 col-md-6 coment-Container">
+            <img src={comentImage} className="comentImage " />
           </Col>
 
           <Col className="col-12 col-md-6 swiper-container">
