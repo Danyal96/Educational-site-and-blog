@@ -15,6 +15,8 @@ import SwiperButtons from "../../components/swiperbuttons/SwiperButtons";
 import "./Home.css";
 import Coments from "../../components/coments/Coments";
 import comentImage from "../../assets/image/Borchin-ir-student-material school young man.png";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 function Home() {
   const [articles, setAtricles] = useState([]);
@@ -29,6 +31,10 @@ function Home() {
       .get("http://localhost/react/api/courses/?page=1&limit=6")
       .then((response) => setCourses(response.data.data));
   }, []);
+
+  useEffect(()=>{
+    Aos.init()
+  } , [])
 
   return (
     <>
@@ -112,11 +118,11 @@ function Home() {
             <h2 className="sectionTitle">نظرات دانشجویان</h2>
           </div>
 
-          <Col className="col-12 col-md-6 coment-Container">
+          <Col className="col-12 col-md-6 coment-Container" data-aos="fade-up">
             <img src={comentImage} className="comentImage " />
           </Col>
 
-          <Col className="col-12 col-md-6 swiper-container">
+          <Col className="col-12 col-md-6 swiper-container" data-aos="fade-down">
             <Swiper
               effect={"cards"}
               grabCursor={true}

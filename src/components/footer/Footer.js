@@ -15,7 +15,7 @@ function Footer() {
       </svg>
 
       <footer className="footer">
-        <Container>
+        <Container className="footerContainer">
           <Row>
             <Col className="col-12 col-md-6 col-lg-4">
               <BiLogoGmail />

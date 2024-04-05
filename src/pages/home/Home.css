@@ -1,3 +1,4 @@
+
 .customSwiperStyle{
     display: flex;
     flex-direction: column-reverse;
@@ -19,6 +20,7 @@
 }
 .comentImage{
     width: 500px;
+    
 }
 .coment-Section{
     display: flex;

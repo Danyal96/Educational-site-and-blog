@@ -88,7 +88,7 @@ function Courses() {
       <MyNavbar />
       <Container>
         <div className="searchSection">
-          <h1>لیست مقالات</h1>
+          <h1>لیست دوره ها</h1>
           <div className="searchBoxContainer">
             <input
               className="searchInput"

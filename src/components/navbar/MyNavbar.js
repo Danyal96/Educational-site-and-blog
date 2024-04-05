@@ -9,7 +9,7 @@ import './MyNavbar.css'
 function MyNavbar() {
   const expand = "md";
   return (
-    <Navbar key={expand} style={{backgroundColor : '#a9c2c4'}} expand={expand}>
+    <Navbar key={expand} style={{backgroundColor : '#a9c2c4' }} expand={expand}>
       <Container>
         <Navbar.Brand className="lalezar fs-4" href="#">بلاگ تستی</Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />

@@ -12,6 +12,7 @@
 .card-text{
     text-align: justify;
     color: #5d5c5c;
+    height: 100px;
 }
 .read-more span{
     margin-left: 5px;

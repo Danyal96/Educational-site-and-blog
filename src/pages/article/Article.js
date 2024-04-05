@@ -37,7 +37,7 @@ function Article() {
           icon: "success",
         });
         axios.delete(`http://localhost/react/api/articles/?id=${articleId}`);
-        navigate("/");
+        navigate("/articles");
       }
     });
   };

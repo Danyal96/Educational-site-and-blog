@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import MyNavbar from "../../components/navbar/MyNavbar";
 import {Form , Button} from "react-bootstrap"
 import Swal from "sweetalert2";
-import Footer from "../../components/footer/Footer";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 function EditArticle() {
   const [articleData, setArticleData] = useState({});
@@ -15,6 +16,10 @@ function EditArticle() {
       .get(`http://localhost/react/api/articles/?id=${articleId}`)
       .then((response) => setArticleData(response.data.data[0]));
   }, []);
+
+  useEffect(()=>{
+    Aos.init()
+  } , [])
 
   const editArticleHandler = () => {
     axios.put(`http://localhost/react/api/articles/?id=${articleId}` , articleData)
@@ -35,7 +40,7 @@ function EditArticle() {
       <MyNavbar />
       <div className="formContainer">
         <Form>
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-right">
             <Form.Label>عنوان مقاله</Form.Label>
             <Form.Control
               value={articleData.title}
@@ -46,7 +51,7 @@ function EditArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-left">
             <Form.Label>توضیح کوتاه</Form.Label>
             <Form.Control
               value={articleData.description}
@@ -57,7 +62,7 @@ function EditArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-right">
             <Form.Label>نویسنده مقاله</Form.Label>
             <Form.Control
               value={articleData.writter}
@@ -68,7 +73,7 @@ function EditArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-left">
             <Form.Label>موضوع مقاله</Form.Label>
             <Form.Control
               value={articleData.category}
@@ -79,7 +84,7 @@ function EditArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-right">
             <Form.Label>عکس مقاله</Form.Label>
             <Form.Control
               value={articleData.image}
@@ -90,7 +95,7 @@ function EditArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-left">
             <Form.Label>مدت زمان خواندن</Form.Label>
             <Form.Control
               value={articleData.readingTime}

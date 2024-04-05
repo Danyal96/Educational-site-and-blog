@@ -3,9 +3,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./AddArticle.css";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import Footer from "../../components/footer/Footer";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 function AddArticle() {
   const [formData, setFormData] = useState({});
@@ -48,12 +49,16 @@ function AddArticle() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
+  useEffect(()=>{
+    Aos.init()
+  } , [])
+
   return (
     <>
       <MyNavbar />
       <div className="formContainer">
         <Form>
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-right">
             <Form.Label>عنوان مقاله</Form.Label>
             <Form.Control
               value={formData.title}
@@ -64,7 +69,7 @@ function AddArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-left">
             <Form.Label>توضیح کوتاه</Form.Label>
             <Form.Control
               value={formData.description}
@@ -75,7 +80,7 @@ function AddArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-right">
             <Form.Label>نویسنده مقاله</Form.Label>
             <Form.Control
               value={formData.writter}
@@ -86,7 +91,7 @@ function AddArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-left">
             <Form.Label>موضوع مقاله</Form.Label>
             <Form.Control
               value={formData.category}
@@ -97,7 +102,7 @@ function AddArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-right">
             <Form.Label>عکس مقاله</Form.Label>
             <Form.Control
               value={formData.image}
@@ -108,7 +113,7 @@ function AddArticle() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" data-aos="fade-left">
             <Form.Label>مدت زمان خواندن</Form.Label>
             <Form.Control
               value={formData.readingTime}
